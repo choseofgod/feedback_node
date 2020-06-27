@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/public/lib/bootstrap.css">
+  <style>
+    /*.contents {*/
+    /*  width: 500px;*/
+    /*}*/
+  </style>
+</head>
+<body>
+  <a class="btn btn-success" href="/post">发表留言</a>
+  <div class="contents">
+    <ul class="list-group">
+      {{each comments}}
+      <li class="list-group-item">{{ $value.name }} 说: {{ $value.message}} <span class="pull-right">{{ $value.dateTime }}</span></li>
+      {{/each}}
+    </ul>
+  </div>
+</body>
+</html>
